@@ -67,15 +67,6 @@ controle-almoxarifado/
 ├── script.js
 └── README.md
 
-## Como contribuir (regras do grupo)
-
-- Nunca trabalhar direto na `main`
-- Uma branch por cartão do Trello (nome igual ao do cartão, ex.: `html-header`)
-- Rodar `git pull` antes de começar qualquer tarefa
-- Commits pequenos e com mensagem clara
-- Abrir Pull Request ao terminar; outra pessoa revisa e faz o merge
-- Quadro de tarefas: [link do Trello]
-
 ## Padrão de nomes
 
 - CSS: minúsculo com hífen (`.item-peca`, `.btn-primario`)
@@ -85,10 +76,10 @@ controle-almoxarifado/
 
 ## Equipe
 
-- [Nome 1]
-- [Nome 2]
-- [Nome 3]
-- [Nome 4]
+- Arthur Amorim
+- Gabriel Morgado
+- Gustavo Lima
+- Icaro Cruz
 
 ## Site publicado
 
