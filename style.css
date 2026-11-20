@@ -1,0 +1,14 @@
+.cabecalho {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 16px 0;
+  border-bottom: 4px solid #2563eb;
+}
+
+
+.logo-empresa {
+  height: 42px; 
+  width: auto;  
+  display: block;
+}
+
