@@ -1,3 +1,4 @@
+body {	
 .cabecalho {
   background-color: #0f172a;
   color: #ffffff;
@@ -6,9 +7,10 @@
 }
 
 
-.logo-empresa {
-  height: 42px; 
+.logo.pecsil {
+  height: 100px; 
   width: auto;  
-  display: block;
+
 }
 
+	}
