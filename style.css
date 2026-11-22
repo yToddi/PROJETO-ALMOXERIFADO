@@ -1,16 +1,42 @@
-body {	
 .cabecalho {
   background-color: #0f172a;
   color: #ffffff;
   padding: 16px 0;
   border-bottom: 4px solid #2563eb;
 }
-
-
-.logo.pecsil {
-  height: 100px; 
-  width: auto;  
-
+body {
+  margin: 0;
+}
+.logo-pecsil {
+  height: 100px;
+  width: auto;
 }
 
-	}
+.resumo {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+
+.card {
+  flex: 1 1 160px;
+  padding: 16px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.card .valor {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
