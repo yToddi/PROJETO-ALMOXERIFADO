@@ -1,15 +1,59 @@
-.cabecalho { 
-  background-color: #0f172a;
-  color: #ffffff;
-  padding: 16px 0;
-  border-bottom: 4px solid #2563eb; /* linha embaixo */
-}
 body {
   margin: 0;  /* cabeçalho encosta nas bordas */
 }
+
+.cabecalho { 
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 14px 16px; 
+  border-bottom: 4px solid #2563eb; 
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.container-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bloco-titulo {
+  display: flex;
+  align-items: center; /* alinha logo, título e etiqueta na mesma linha */
+  gap: 14px;           
+}
+
+.logo-box {
+  width: 118px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden; /* recorta o excesso de borda branca do arquivo quadrado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .logo-pecsil {
-  height: 100px;
-  width: auto;
+  width: 132%;
+  height: auto;
+  display: block;
+}
+
+.bloco-titulo h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.etiqueta-setor {
+  background-color: #bae6fd;
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
 }
 
 .resumo {
