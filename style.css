@@ -172,7 +172,72 @@ body {
   color: #ffffff;
   font-weight: 600;
 }
+.rodape {
+  margin-top: auto; /* Empurra o rodapé para a base da tela */
+  background-color: #0f172a;
+  color: #e2e8f0;
+  border-top: 4px solid #2563eb; /* Espelha a linha azul do cabeçalho */
+  padding: 18px 16px;
+  font-size: 13px;
+}
 
+.rodape-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.rodape-contato {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rodape-contato a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.rodape-contato a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.rodape .separador {
+  color: #475569;
+}
+
+.rodape-redes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rodape-redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e8f0;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.rodape-redes a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.rodape-endereco {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
 .toggle-ativo:hover {
   background: #1d4ed8; 
 }
