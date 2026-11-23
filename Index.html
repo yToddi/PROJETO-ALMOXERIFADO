@@ -2,11 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pecsil Moldes — Controle de Fundos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- CABEÇALHO: logo, título e setor -->
   <header class="cabecalho">
     <div class="container-topo">
       <div class="bloco-titulo">
@@ -19,38 +21,81 @@
     </div>
   </header>
 
-  <section class="resumo">
-    <div class="card">
-      <h3>Peças no Cliente</h3>
-      <div class="valor" id="resumo-total">6</div> <!-- O 6 é placeholder: o valor real é preenchido pelo JS via id="resumo-total" -->
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+
+    <!-- RESUMO: 3 cards -->
+    <section class="resumo">
+      <div class="card">
+        <h3>Peças no Cliente</h3>
+        <div class="valor" id="resumo-total">6</div>
+      </div>
+
+      <div class="card">
+        <h3>Próx. Forma</h3>
+        <div class="valor" id="resumo-forma">Nº 2</div>
+      </div>
+
+      <div class="card">
+        <h3>Próx. Bloco</h3>
+        <div class="valor" id="resumo-bloco">Nº 3</div>
+      </div>
+    </section>
+
+    <!-- ABAS DE CLIENTES -->
+    <nav class="barra-abas">
+      <div id="abas" class="abas">
+        <button class="aba aba-ativa" type="button">
+          Cliente Exemplo A <span class="contador">3</span>
+        </button>
+        <button class="aba" type="button">
+          Cliente Exemplo B <span class="contador">1</span>
+        </button>
+      </div>
+
+      <button id="btn-novo-cliente" class="btn-novo-cliente" type="button">
+        + Novo Cliente
+      </button>
+    </nav>
+
+    <!-- BUSCA: campo de texto + toggle de escopo -->
+    <section class="barra-busca">
+      <input
+        id="busca"
+        class="busca"
+        type="text"
+        placeholder="Buscar por ART (ex: 1514, TG, DG), revisão (R1) ou nº..."
+      >
+
+      <div id="toggle-escopo" class="toggle-escopo">
+        <button class="toggle-btn toggle-ativo" type="button">Cliente Atual</button>
+        <button class="toggle-btn" type="button">Todos os Clientes</button>
+      </div>
+    </section>
+
+    <!-- aqui entra a lista/tabela de peças -->
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+
+      <div class="rodape-contato">
+        <a href="mailto:contato@pecsil.com.br">contato@pecsil.com.br</a>
+        <span class="separador">|</span>
+        <a href="tel:+5500000000000">(00) 0000-0000</a>
+      </div>
+
+      <div class="rodape-redes">
+        <!-- links/ícones das redes sociais -->
+      </div>
+
+      <p class="rodape-endereco">Endereço da Pecsil Moldes</p>
+
     </div>
+  </footer>
 
-    <div class="card">
-      <h3>Próx. Forma</h3>
-      <div class="valor" id="resumo-forma">Nº 2</div> <!-- O n°2 é placeholder: o valor real é preenchido pelo JS via id="resumo-forma" -->
-    </div>
-
-    <div class="card">
-      <h3>Próx. Bloco</h3>
-      <div class="valor" id="resumo-bloco">Nº 3</div> <!-- O n°3 é placeholder: o valor real é preenchido pelo JS via id="resumo-bloco" -->
-    </div>
-  </section>
-
-<nav class="barra-abas">
-  <div id="abas" class="abas">
-    <button class="aba aba-ativa" type="button">                           <!-- #abas: o JS desenha uma aba por cliente aqui dentro.  As 2 abas abaixo são fixas, só de exemplo para o CSS estilizar. -->
-      Cliente Exemplo A <span class="contador">3</span>
-    </button>
-    <button class="aba" type="button">
-      Cliente Exemplo B <span class="contador">1</span>
-    </button>
-  </div>
-
-
-  <button id="btn-novo-cliente" class="btn-novo-cliente" type="button">  <!-- Botão para cadastrar novo cliente (o JS vai tratar o clique via #btn-novo-cliente) -->
-    + Novo Cliente
-  </button>
-
-</nav>
+  <script src="script.js"></script>
 </body>
 </html>

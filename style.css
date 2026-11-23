@@ -1,8 +1,10 @@
+/* GLOBAL */
 body {
-  margin: 0;  /* cabeçalho encosta nas bordas */
+  margin: 0; /* cabeçalho encosta nas bordas */
 }
 
-.cabecalho { 
+/* CABEÇALHO */
+.cabecalho {
   background-color: #0f172a;
   color: #ffffff;
   padding: 14px 16px; 
@@ -56,15 +58,16 @@ body {
   letter-spacing: 0.5px;
 }
 
+/* CARDS DE RESUMO */
 .resumo {
-  display: flex;  /* cards lado a lado */
+  display: flex;    /* cards lado a lado */
   gap: 16px;        /* espaço entre eles */
-  flex-wrap: wrap; /* quebra linha em tela pequena */
+  flex-wrap: wrap;  /* quebra linha em tela pequena */
   padding: 16px;
 }
 
 .card {
-  flex: 1 1 160px;   /* cresce igual, base de 160px */
+  flex: 1 1 160px;    /* cresce igual, base de 160px */
   padding: 16px;
   border: 1px solid #000000;
   border-radius: 8px; /* cantos arredondados */
@@ -72,9 +75,9 @@ body {
   text-align: center;
 }
 
-.card h3 {          /* título pequeno e cinza */
+.card h3 {            /* título pequeno e cinza */
   margin: 0 0 8px;
-  font-size: 14px;  
+  font-size: 14px;
   color: #666;
   font-weight: 500;
 }
@@ -84,10 +87,12 @@ body {
   font-weight: 700;
   color: #222;
 }
+
+/* ABAS DE CLIENTES */
 .barra-abas {
   display: flex;
   align-items: center;
-  justify-content: space-between;   /* abas à esquerda, botão à direita */
+  justify-content: space-between; /* abas à esquerda, botão à direita */
   gap: 16px;
   padding: 0 16px;
   border-bottom: 1px solid #cbd5e1;
@@ -113,27 +118,32 @@ body {
   cursor: pointer;
 }
 
-.aba:hover { 
-  background: #b7d1f3;   
+.aba:not(.aba-ativa):hover {
+  background: #b7d1f3; /* hover só nas abas inativas */
 }
 
-.aba-ativa {  /* aba escolhida */
+.aba-ativa {          /* aba escolhida */
   background: #2563eb;
   border-color: #2563eb;
   color: #ffffff;
   font-weight: 600;
 }
 
+.aba-ativa:hover {
+  background: #1d4ed8; /* azul mais escuro, texto continua branco */
+}
+
 .contador {
   min-width: 22px;
   padding: 2px 8px;
-  border-radius: 999px;     /* formato de pílula */
+  border-radius: 999px; /* formato de pílula */
   background: #0f172a;
   color: #ffffff;
   font-size: 12px;
-  text-align: center;    /* número de peças da aba */
+  text-align: center;   /* número de peças da aba */
 }
 
+/* BOTÃO NOVO CLIENTE */
 .btn-novo-cliente {
   padding: 8px 16px;
   border: none;
@@ -145,6 +155,66 @@ body {
   cursor: pointer;
 }
 
-.btn-novo-cliente:hover { 
-  background: #15803d;  /* Muda cor ao passar o mouse em cima do novo cliente */
+.btn-novo-cliente:hover {
+  background: #15803d; /* muda cor ao passar o mouse */
+}
+
+/* BUSCA E TOGGLE DE ESCOPO */
+.barra-busca {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;  /* quebra linha em tela pequena */
+  padding: 16px;
+}
+
+.busca {
+  flex: 1 1 300px;  /* input ocupa o espaço que sobrar */
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.busca:focus {
+  outline: none;
+  border-color: #2563eb; /* destaque azul ao digitar */
+}
+
+.toggle-escopo {
+  display: flex;    /* 2 botões colados, formato de segmento */
+}
+
+.toggle-btn {
+  padding: 10px 16px;
+  border: 1px solid #cbd5e1;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.toggle-btn:first-child {
+  border-radius: 6px 0 0 6px; /* arredonda só a esquerda */
+}
+
+.toggle-btn:last-child {
+  border-radius: 0 6px 6px 0; /* arredonda só a direita */
+  border-left: none;
+}
+
+.toggle-btn:not(.toggle-ativo):hover {
+  background: #cbd5e1; /* hover só no botão inativo */
+  color: #0f172a;
+}
+
+.toggle-ativo {
+  background: #2563eb; /* opção selecionada */
+  border-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.toggle-ativo:hover {
+  background: #1d4ed8; 
 }
