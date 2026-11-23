@@ -28,38 +28,45 @@
     <section class="resumo">
       <div class="card">
         <h3>Peças no Cliente</h3>
-        <div class="valor" id="resumo-total">6</div>
+        <div class="valor" id="resumo-total">6</div> <!-- placeholder: o JS atualiza via #resumo-total -->
       </div>
 
       <div class="card">
         <h3>Próx. Forma</h3>
-        <div class="valor" id="resumo-forma">Nº 2</div>
+        <div class="valor" id="resumo-forma">Nº 2</div> <!-- placeholder: o JS atualiza via #resumo-forma -->
       </div>
 
       <div class="card">
         <h3>Próx. Bloco</h3>
-        <div class="valor" id="resumo-bloco">Nº 3</div>
+        <div class="valor" id="resumo-bloco">Nº 3</div> <!-- placeholder: o JS atualiza via #resumo-bloco -->
       </div>
     </section>
 
     <!-- ABAS DE CLIENTES -->
     <nav class="barra-abas">
+
+      <!-- #abas: o JS desenha uma aba por cliente aqui dentro.
+           As 2 abas abaixo são fixas, só de exemplo para o CSS estilizar. -->
       <div id="abas" class="abas">
-        <button class="aba aba-ativa" type="button">
-          Cliente Exemplo A <span class="contador">3</span>
+        <button class="aba aba-ativa" type="button"> <!-- aba-ativa = aba selecionada -->
+          Cliente Exemplo A <span class="contador">3</span> <!-- contador = nº de peças do cliente -->
         </button>
         <button class="aba" type="button">
           Cliente Exemplo B <span class="contador">1</span>
         </button>
       </div>
 
+      <!-- Botão para cadastrar novo cliente (o JS vai tratar o clique via #btn-novo-cliente) -->
       <button id="btn-novo-cliente" class="btn-novo-cliente" type="button">
         + Novo Cliente
       </button>
+
     </nav>
 
     <!-- BUSCA: campo de texto + toggle de escopo -->
     <section class="barra-busca">
+
+      <!-- #busca: o JS lê o valor digitado para filtrar as peças -->
       <input
         id="busca"
         class="busca"
@@ -67,10 +74,13 @@
         placeholder="Buscar por ART (ex: 1514, TG, DG), revisão (R1) ou nº..."
       >
 
+      <!-- #toggle-escopo: define onde a busca vale (cliente da aba ou todos).
+           O JS troca a classe toggle-ativo ao clicar. -->
       <div id="toggle-escopo" class="toggle-escopo">
         <button class="toggle-btn toggle-ativo" type="button">Cliente Atual</button>
         <button class="toggle-btn" type="button">Todos os Clientes</button>
       </div>
+
     </section>
 
     <!-- aqui entra a lista/tabela de peças -->
